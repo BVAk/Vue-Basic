@@ -4,6 +4,9 @@
     <alert mode="primary">First alert</alert>
     <alert mode="danger">Second alert</alert>
     <alert mode="success">Last alert</alert>
+    <div><input type="text" v-model="lastName" placeholder="Enter your name">
+    <p>Welcome, {{lastName}}</p>
+    </div>
     </div>
 </template>
 
@@ -14,6 +17,11 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String
+  },
+  data(){
+    return{
+      lastName:""
+    }
   }
 };
 </script>
