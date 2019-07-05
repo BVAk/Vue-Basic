@@ -7,6 +7,8 @@
     <div><input type="text" v-model="lastName" placeholder="Enter your name">
     <p>Welcome, {{lastName}}</p>
     </div>
+    <button v-on:click="ClickMode">Click me</button>
+    <input type="text" @keyup.enter="doSmth" placeholder="Please, write your code"></input>
     </div>
 </template>
 
@@ -22,6 +24,13 @@ export default {
     return{
       lastName:""
     }
+  },
+  methods:{
+    ClickMode:function(){console.log("You click on the button")
+  },
+  doSmth:function(){
+    console.log('lala')
+  }
   }
 };
 </script>
