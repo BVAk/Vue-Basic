@@ -9,6 +9,11 @@
     </div>
     <button v-on:click="ClickMode">Click me</button>
     <input type="text" @keyup.enter="doSmth" placeholder="Please, write your code"></input>
+    
+    <h3></h3>
+    <ul>
+    <li v-for="person in students"> {{person}}   </li>
+    </ul>
     </div>
 </template>
 
@@ -22,7 +27,8 @@ export default {
   },
   data(){
     return{
-      lastName:""
+      lastName:"",
+      students:['Vika','Andrew','Artem']
     }
   },
   methods:{
